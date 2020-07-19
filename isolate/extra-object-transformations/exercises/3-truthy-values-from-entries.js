@@ -9,17 +9,14 @@ const assert = chai.assert;
  */
 const keepTruthyEntries = (obj) => {
 
-  const truthyObject = Object._(_)
+  const objEntries = Object._(_);
+  const allTruthyEntries = objEntries
     ._(entry => {
-      const value = _;
+      const value = entry[1];
       return _;
-    })
-    ._((newObj, entry) => {
-      const key = _;
-      const value = _;
-      _;
-      return newObj;
-    }, _);
+    });
+
+  const truthyObject = Object._(_);
 
   return truthyObject;
 };
